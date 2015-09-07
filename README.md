@@ -1,7 +1,7 @@
 # React Progress HUD
 [![npm](https://img.shields.io/npm/v/react-progress-hud.svg?style=flat-square)](https://www.npmjs.com/package/react-progress-hud)
 [![npm downloads](https://img.shields.io/npm/dm/react-progress-hud.svg?style=flat-square)](https://www.npmjs.com/package/react-progress-hud)
-[![Travis](https://img.shields.io/travis/naoufal/react-progress-hud.svg?style=flat-square)](https://travis-ci.org/naoufal/react-native-progress-hu://travis-ci.org/naoufal/react-progress-hud)
+[![Travis](https://img.shields.io/travis/naoufal/react-progress-hud.svg?style=flat-square)](https://travis-ci.org/naoufal/react-native-progress-hud)
 [![Code Climate](https://img.shields.io/codeclimate/github/naoufal/react-progress-hud.svg?style=flat-square)](https://codeclimate.com/github/naoufal/react-progress-hud)
 
 React Progress HUD is a [React](https://facebook.github.io/react) port of the popular [`SVProgressHUD`](https://github.com/TransitApp/SVProgressHUD).  It is a clean and easy-to-use HUD meant to display the progress of an ongoing task.
