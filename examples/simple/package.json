@@ -1,0 +1,27 @@
+{
+  "name": "react-progress-hud-example",
+  "version": "1.0.0",
+  "description": "react-progress-hud-example demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/naoufal/react-progress-hud.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naoufal/react-progress-hud/issues"
+  },
+  "homepage": "https://github.com/naoufal/react-progress-hud",
+  "devDependencies": {
+    "babel-core": "5.8.23",
+    "babel-loader": "5.1.4",
+    "node-libs-browser": "0.5.2",
+    "react": "0.13.3",
+    "react-hot-loader": "1.2.7",
+    "webpack": "1.9.11",
+    "webpack-dev-server": "1.9.0"
+  }
+}
