@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from "react";
 import { Spring } from "react-motion";
 
-import styles from "./styles";
-import images from "./images";
+import styles from "../styles";
+import images from "../images";
 
 const propTypes = {
   clickHandler: PropTypes.func,
