@@ -6,6 +6,8 @@
 
 React Progress HUD is a [React](https://facebook.github.io/react) port of the popular [`SVProgressHUD`](https://github.com/TransitApp/SVProgressHUD).  It is a clean and easy-to-use HUD meant to display the progress of an ongoing task.
 
+Are you using [React Native](https://facebook.github.io/react-native/)?  Check out [React Native Progress HUD](https://github.com/naoufal/react-native-progress-hud).
+
 ## Install
 ```shell
 npm i --save react-progress-hud
