@@ -32,35 +32,37 @@ export default class ProgressHUD extends Component {
     return (
       // jshint ignore:start
       <div
-        key="ProgressHUD"
         style={Object.assign(
-          styles.overlay,
-          {
-            backgroundColor: this.props.overlayColor,
-            display: this.props.isVisible ? "flex" : "none"
+          styles.container, {
+            display: this.props.isVisible ? "block" : "none"
           }
         )}
-        onClick={this.props.clickHandler}
       >
-        <div style={styles.container}>
+        <div
+          key="ProgressHUD"
+          style={Object.assign(
+            styles.overlay,
+            {
+              backgroundColor: this.props.overlayColor,
+            }
+          )}
+          onClick={this.props.clickHandler}
+        >
+        </div>
+        <div style={styles.content}>
           <Spring defaultValue={{ val: 0 }} endValue={this._getEndValue}>
             {interpolated =>
               <div
                 style={Object.assign(
                   styles.spinner,
                   {
+                    '-ms-transform': `rotate(${interpolated.val}deg)`,
                     transform: `rotate(${interpolated.val}deg)`,
                     backgroundColor: this.props.color
                   }
                 )}
               >
                 <img src={`data:image/png;base64,${images["1x"]}`} />
-                <div
-                  style={Object.assign(
-                    styles.curve,
-                    { backgroundColor: this.props.color }
-                  )}
-                />
                 <div style={styles.inner_spinner} />
               </div>
             }

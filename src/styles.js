@@ -1,38 +1,37 @@
 const styles = {
-  overlay: {
-    zoom: 1,
-    filter: alpha(opacity = 50),
-    opacity: 0.5,
-    display: "block",
+  container: {
     position: "fixed",
-    // display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    // flex: 1,
     top: 0,
     left: 0,
     right: 0,
-    bottom: 0,
+    bottom: 0
+  },
+  overlay: {
+    position: "absolute",
+    width: "100%",
+    height: "100%",
+    filter: "alpha(opacity = 50)",
     zIndex: 2147483647
   },
-  container: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+  content: {
+    position: "absolute",
+    display: "block",
     width: 100,
     height: 100,
     borderRadius: 16,
-    backgroundColor: "#fff"
+    backgroundColor: "#fff",
+    top: "calc(50% - 50px)",
+    left: "calc(50% - 50px)",
+    zIndex: 2147483648
   },
   spinner: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    position: "relative",
+    position: "absolute",
     width: 50,
     height: 50,
     borderRadius: 50 / 2,
-    backgroundColor: "#000"
+    backgroundColor: "#000",
+    top: "calc(50% - 25px)",
+    left: "calc(50% - 25px)"
   },
   inner_spinner: {
     position: "absolute",
@@ -42,14 +41,6 @@ const styles = {
     height: 42,
     borderRadius: 42 / 2,
     backgroundColor: "#fff"
-  },
-  curve: {
-    position: "absolute",
-    left: 23,
-    width: 4,
-    height: 4,
-    borderRadius: 2,
-    backgroundColor: "#000"
   }
 };
 
