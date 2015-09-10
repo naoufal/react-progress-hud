@@ -1,10 +1,14 @@
 const styles = {
   overlay: {
+    zoom: 1,
+    filter: alpha(opacity = 50),
+    opacity: 0.5,
+    display: "block",
     position: "fixed",
-    display: "flex",
+    // display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    flex: 1,
+    // flex: 1,
     top: 0,
     left: 0,
     right: 0,
