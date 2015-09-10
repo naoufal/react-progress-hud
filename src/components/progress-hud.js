@@ -46,7 +46,6 @@ export default class ProgressHUD extends Component {
             styles.overlay,
             {
               backgroundColor: this.props.overlayColor,
-              filter: `alpha(opacity=${this.props.overlayOpacity * 100})`,
               opacity: this.props.overlayOpacity
             }
           )}
