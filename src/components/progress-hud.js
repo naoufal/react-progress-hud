@@ -8,12 +8,14 @@ const propTypes = {
   clickHandler: PropTypes.func,
   color: PropTypes.string,
   isVisible: PropTypes.bool.isRequired,
-  overlayColor: PropTypes.string
+  overlayColor: PropTypes.string,
+  overlayOpacity: PropTypes.string
 };
 const defaultProps = {
   clickHandler: () => {},
   color: "#000",
-  overlayColor: "rgba(0, 0, 0, 0)"
+  overlayColor: "rgb(0, 0, 0)",
+  overlayOpacity: "0.5"
 };
 
 export default class ProgressHUD extends Component {
@@ -32,25 +34,35 @@ export default class ProgressHUD extends Component {
     return (
       // jshint ignore:start
       <div
-        key="ProgressHUD"
         style={Object.assign(
-          styles.overlay,
-          {
-            backgroundColor: this.props.overlayColor,
-            display: this.props.isVisible ? "flex" : "none"
+          styles.container, {
+            display: this.props.isVisible ? "block" : "none"
           }
         )}
-        onClick={this.props.clickHandler}
       >
-        <div style={styles.container}>
+        <div
+          key="ProgressHUD"
+          style={Object.assign(
+            styles.overlay,
+            {
+              backgroundColor: this.props.overlayColor,
+              opacity: this.props.overlayOpacity
+            }
+          )}
+          onClick={this.props.clickHandler}
+        >
+        </div>
+        <div style={styles.content}>
           <Spring defaultValue={{ val: 0 }} endValue={this._getEndValue}>
             {interpolated =>
               <div
                 style={Object.assign(
                   styles.spinner,
                   {
-                    transform: `rotate(${interpolated.val}deg)`,
-                    backgroundColor: this.props.color
+                    backgroundColor: this.props.color,
+                    msTransform: `rotate(${interpolated.val}deg)`,
+                    WebkitTransform: `rotate(${interpolated.val}deg)`,
+                    transform: `rotate(${interpolated.val}deg)`
                   }
                 )}
               >
