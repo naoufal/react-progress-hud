@@ -43,7 +43,7 @@ export default class ProgressHUD extends Component {
           style={Object.assign(
             styles.overlay,
             {
-              backgroundColor: this.props.overlayColor,
+              backgroundColor: this.props.overlayColor
             }
           )}
           onClick={this.props.clickHandler}
@@ -56,7 +56,7 @@ export default class ProgressHUD extends Component {
                 style={Object.assign(
                   styles.spinner,
                   {
-                    '-ms-transform': `rotate(${interpolated.val}deg)`,
+                    "-ms-transform": `rotate(${interpolated.val}deg)`,
                     transform: `rotate(${interpolated.val}deg)`,
                     backgroundColor: this.props.color
                   }
