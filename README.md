@@ -56,7 +56,8 @@ The following props can be used to modify the HUD's style and/or behaviour:
 |---|---|---|---|---|
 |__`isVisible`__|_Boolean_|Required|`N/A`|Displays the HUD when set to true.
 |__`clickHandler`__|_Function_|Optional|`() => {}`|Sets a clickHandler on the `ProgressHUD`.
-|__`overlayColor`__|_String_|Optional|`rgba(0, 0, 0, 0)`|Sets the color of the overlay.
+|__`overlayColor`__|_String_|Optional|`rgb(0, 0, 0)`|Sets the color of the overlay.
+|__`overlayOpacity`__|_String_|Optional|`0.5`|Sets the opacity of the overlay.
 |__`color`__|_String_|Optional|`#000`|Sets the color of the spinner.
 
 ## License

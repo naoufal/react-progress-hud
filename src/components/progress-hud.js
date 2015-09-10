@@ -8,12 +8,14 @@ const propTypes = {
   clickHandler: PropTypes.func,
   color: PropTypes.string,
   isVisible: PropTypes.bool.isRequired,
-  overlayColor: PropTypes.string
+  overlayColor: PropTypes.string,
+  overlayOpacity: PropTypes.string
 };
 const defaultProps = {
   clickHandler: () => {},
   color: "#000",
-  overlayColor: "rgba(0, 0, 0, 0)"
+  overlayColor: "rgb(0, 0, 0)",
+  overlayOpacity: "0.5"
 };
 
 export default class ProgressHUD extends Component {
@@ -43,7 +45,9 @@ export default class ProgressHUD extends Component {
           style={Object.assign(
             styles.overlay,
             {
-              backgroundColor: this.props.overlayColor
+              backgroundColor: this.props.overlayColor,
+              filter: `alpha(opacity=${this.props.overlayOpacity * 100})`,
+              opacity: this.props.overlayOpacity
             }
           )}
           onClick={this.props.clickHandler}
@@ -56,10 +60,10 @@ export default class ProgressHUD extends Component {
                 style={Object.assign(
                   styles.spinner,
                   {
-                    webkitTransform: `rotate(${interpolated.val}deg)`,
+                    backgroundColor: this.props.color,
                     msTransform: `rotate(${interpolated.val}deg)`,
-                    transform: `rotate(${interpolated.val}deg)`,
-                    backgroundColor: this.props.color
+                    WebkitTransform: `rotate(${interpolated.val}deg)`,
+                    transform: `rotate(${interpolated.val}deg)`
                   }
                 )}
               >
