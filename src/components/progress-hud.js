@@ -56,13 +56,20 @@ export default class ProgressHUD extends Component {
                 style={Object.assign(
                   styles.spinner,
                   {
-                    "-ms-transform": `rotate(${interpolated.val}deg)`,
+                    webkitTransform: `rotate(${interpolated.val}deg)`,
+                    msTransform: `rotate(${interpolated.val}deg)`,
                     transform: `rotate(${interpolated.val}deg)`,
                     backgroundColor: this.props.color
                   }
                 )}
               >
                 <img src={`data:image/png;base64,${images["1x"]}`} />
+                <div
+                  style={Object.assign(
+                    styles.curve,
+                    { backgroundColor: this.props.color }
+                  )}
+                />
                 <div style={styles.inner_spinner} />
               </div>
             }
