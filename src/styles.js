@@ -4,14 +4,14 @@ const styles = {
     left: 0,
     top: 0,
     right: 0,
-    bottom: 0
+    bottom: 0,
+    zIndex: 2147483647
   },
   overlay: {
     position: "absolute",
     width: "100%",
     height: "100%",
     filter: "alpha(opacity = 50)",
-    zIndex: 2147483647
   },
   content: {
     position: "absolute",

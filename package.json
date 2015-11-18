@@ -1,6 +1,6 @@
 {
   "name": "react-progress-hud",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "A clean and lightweight progress HUD for your React app",
   "main": "lib/index.js",
   "scripts": {
@@ -29,7 +29,7 @@
   },
   "homepage": "https://github.com/naoufal/react-progress-hud",
   "dependencies": {
-    "babel-runtime": "5.8.20",    
+    "babel-runtime": "5.8.20",
     "react-motion": "0.2.7"
   },
   "devDependencies": {
